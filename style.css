@@ -1,0 +1,98 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color:7AE2CF; /* Light creamy background */
+    color: #333;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #8B0000; /* Dark red */
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: #555;
+}
+
+.menu-item {
+    margin: 12px 0;
+    padding: 10px;
+    border: 1px solid #f0e6d2;
+    border-radius: 8px;
+    background-color: #fef6e4; /* Soft beige */
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #fae5c3; /* Light orange hover */
+}
+
+.menu-item label {
+    margin-left: 10px;
+    color:077A7D; /* Chocolate brown */
+    font-weight: 500;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color:F5EEDD; /* Coral */
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e36745;
+}
+
+.bill {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 2px solid #ddd;
+    background-color:210F37;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.bill h2 {
+    color: #228b22; /* Forest green */
+}
+
+.bill ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 16px;
+    color: #444;
+}
+
+.bill p {
+    font-size: 18px;
+    color: #000080; /* Navy blue */
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Our Café</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function validateForm() {
+            const checkboxes = document.querySelectorAll('input[name="items"]:checked');
+            if (checkboxes.length === 0) {
+                alert("⚠️ Please select at least one item to place an order.");
+                return false; // prevent form submission
+            }
+            return true; // allow form submission
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>☕ Welcome to Our Café</h1>
+        <p>Please select the items you'd like to order:</p>
+
+        <form method="POST" onsubmit="return validateForm();">
+            {% for item, price in menu.items() %}
+                <div class="menu-item">
+                    <input type="checkbox" name="items" value="{{ item }}">
+                    <label>{{ item }} - ₹{{ price }}</label>
+                </div>
+            {% endfor %}
+            <button type="submit">Place Order</button>
+        </form>
+
+        {% if ordered_items %}
+            <div class="bill">
+                <h2>Your Bill</h2>
+                <ul>
+                    {% for item, price in ordered_items %}
+                        <li>{{ item }} - ₹{{ price }}</li>
+                    {% endfor %}
+                </ul>
+                <p><strong>Total: ₹{{ total }}</strong></p>
+                <p>🙏 Thank you for visiting! Come again!</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

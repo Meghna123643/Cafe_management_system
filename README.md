@@ -18,6 +18,7 @@ Python (Flask)
 HTML, CSS, JavaScript
 
 Responsive design with basic form validation
+
 ▶️ How to Run
 pip install flask
 python app.py
